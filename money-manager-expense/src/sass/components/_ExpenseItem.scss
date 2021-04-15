@@ -1,0 +1,38 @@
+.ExpenseItem {
+    display: flex;
+    align-items: center;
+    border: 2px solid $color-black;
+    border-radius: 1rem;
+    margin: 2rem;
+
+    & > * {
+        margin: 1rem 2rem 1rem 2rem;
+    }
+
+    &__date {
+        display: flex;
+        gap: 1rem;
+        font-size: 2rem;
+        
+        &-month {
+            
+        }
+
+        &-day {
+
+        }
+
+        &-year {
+
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+    }
+    
+    &__price {
+        font-size: 2rem;
+
+    }
+}

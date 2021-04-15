@@ -1,0 +1,28 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin bgClipPath($img: "../img/img-hotel-6.jpg") {
+  width: 100%;
+  height: 65rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(#fff, 0.7),
+      rgba(#000, 0.7)
+    ),
+    url($img);
+  background-size: cover;
+  background-position: bottom;
+  clip-path: polygon(50% 25%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
