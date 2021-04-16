@@ -2,6 +2,7 @@ import React from 'react'
 
 import "./sass/main.scss";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from './components/NewExpense/NewExpense'
 
 function App() {
   const expenses = [
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className="App">
       <h1>Money Expense Manager</h1>
+      <NewExpense />
       <Expenses items={expenses} />
     </div>
   );
