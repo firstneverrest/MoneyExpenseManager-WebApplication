@@ -1,6 +1,6 @@
 // how to work with multiple state
 
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
@@ -53,7 +53,7 @@ const ExpenseForm = (props) => {
       date: new Date(enteredDate),
     };
 
-    props.onSaveExpenseData();
+    props.onSaveExpenseData(expenseData);
 
     setEnteredTitle("");
     setEnteredAmount("");
@@ -69,8 +69,7 @@ const ExpenseForm = (props) => {
             type="text"
             value={enteredTitle}
             onChange={titleChangeHandler}
-          />{" "}
-          {/*input always get string*/}
+          />
         </div>
         <div className="NewExpense__control">
           <label>Amount</label>
@@ -94,6 +93,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="NewExpense__actions">
+        <button type="button" onClick={props.onStop}>Cancel</button> {/*type button make pressing button not submit the form*/}
         <button type="submit">Add Expense</button>
       </div>
     </form>
