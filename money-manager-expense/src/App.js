@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import "./sass/main.scss";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import Tooltip from './components/UI/Tooltip'
 
 const EXPENSES_DATA = [
   {
@@ -37,9 +38,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Money Expense Manager</h1>
+      {/* <h1>Money Expense Manager</h1>
       <NewExpense onAddExpense={addExpenseHandler}/>
-      <Expenses items={expenses} />
+      <Expenses items={expenses} /> */}
+      <Tooltip/>
     </div>
   );
 }
